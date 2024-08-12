@@ -1,7 +1,7 @@
 const SunIcon = ({ color }) => {
     return (
-        <svg fill={color} height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-            viewBox="0 0 511.998 511.998" xml:space="preserve">
+        <svg fill={color} height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 511.998 511.998" xmlSpace="preserve">
             <g>
                 <g>
                     <path d="M435.804,378.838c-5.223-2.458-11.448-0.213-13.903,5.008c-4.662,9.913-14.717,16.318-25.616,16.318

@@ -1,33 +1,15 @@
-import useLocalStorage from 'use-local-storage';
-
-import SunIcon from './components/icons/SunIcon';
-import MoonIcon from './components/icons/MoonIcon';
+import ToggleTheme, { ThemeMode } from "./components/ToggleTheme";
 
 export default function App() {
-  const preference = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  const [darkMode, setDarkMode] = useLocalStorage("isDark", preference);
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  }
   return (
-    <div className={`${darkMode && "dark"}`}>
+    <div className={`${ThemeMode() && "dark"}`}>
       <main className="flex min-h-screen flex-col p-12 bg-neutral-100 dark:bg-neutral-900 ">
         <nav className="grid grid-cols-3 items-center">
           <h1 className="text-xl font-semibold dark:text-white ">mhthe1</h1>
           <span className="justify-self-center text-blue-600 font-mono">
             Dark Mode Implementation with React and Tailwind
           </span>
-          <button
-            onClick={toggleDarkMode}
-            className="justify-self-end w-8 h-8 rounded-full flex items-center justify-center"
-          >
-            {darkMode ? (
-              <SunIcon color="white" />
-            ) : (
-              <MoonIcon />
-            )}
-          </button>
+          <ToggleTheme />
         </nav>
         <section className="w-[90%] max-w-3xl mx-auto mt-40 flex flex-col gap-8">
           <h1 className="text-blue-600 text-5xl font-semibold">
@@ -77,7 +59,7 @@ export default function App() {
               <div className="flex items-center">
                 <span className="mr-2 text-2xl text-red-500">•</span> Git
               </div>
-              
+
             </div>
           </div>
         </section>
